@@ -10,24 +10,46 @@
   width: 100%;
   background-color: #2B7DBC;
   color: white;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 25px;
   border: solid 1px #21295C;
   padding: 15px;
   border-radius: 5px;
   color: #e4f4ff;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   
   opacity: 0;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-name: opacidade;
-  animation-timing-function: linear;
-  animation-delay: .2s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: opacidade;
+          animation-name: opacidade;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
 
+}
+
+@-webkit-keyframes opacidade{
+  
+  100%{
+    opacity: 1;
+  }
 }
 
 @keyframes opacidade{
@@ -43,19 +65,27 @@
 }
 
 .product-info article a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-radius: 5px;
   background-color: #065A82;
   height: 42px;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
   border: solid 1px #1B3B6F;
   margin-top: 20px;
   color: #e4f4ff;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   
 }
@@ -67,7 +97,8 @@
 }
 
 .product-info article:hover {
-  box-shadow: 2px 2px 10px #21295C;
+  -webkit-box-shadow: 2px 2px 10px #21295C;
+          box-shadow: 2px 2px 10px #21295C;
 }
 
 
@@ -76,9 +107,15 @@
  
   padding-top: 20px;
   padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product-info .action a { 
@@ -90,19 +127,23 @@
   font-size:16px;
   border: 0;
   font-weight: 600;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
   text-decoration: none;
 }
 
 .product-info .action a:hover{
-  box-shadow: 2px 2px 10px black;
+  -webkit-box-shadow: 2px 2px 10px black;
+          box-shadow: 2px 2px 10px black;
 }
 
 .product-info .action a:disabled, action button:disabled:hover{
   opacity: 0.3;
   cursor: initial;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 
@@ -115,16 +156,31 @@
     display: block;  
     margin-top: 25px;  
     border-radius: 5px;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-name: placeHolderShimmer;
-    animation-timing-function: linear;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-name: placeHolderShimmer;
+            animation-name: placeHolderShimmer;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
     background: darkgray;
+    background: -o-linear-gradient(320deg, #075a82 20%, #014567c3 50%, #075a82 80%);
     background: linear-gradient(130deg, #075a82 20%, #014567c3 50%, #075a82 80%);
     background-size: 200% 100%;
     height: 153px;
     position: relative;
+}
+
+@-webkit-keyframes placeHolderShimmer{
+  0%{
+    background-position: 100% 0
+  }
+  100%{
+    background-position: -100% 0
+  }
 }
 
 @keyframes placeHolderShimmer{
@@ -135,4 +191,3 @@
     background-position: -100% 0
   }
 }
-

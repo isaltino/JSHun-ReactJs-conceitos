@@ -1,37 +1,64 @@
-.product-list { 
+.product-list {
   margin: 0 auto;
   width: 100%;
   max-width: 500px;
 }
 
-
 .product-list article {
   margin: 0 auto;
   width: 100%;
-  background-color: #2B7DBC;
+  background-color: #2b7dbc;
   color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+
   align-items: center;
   margin-top: 25px;
-  border: solid 1px #21295C;
+  border: solid 1px #21295c;
   padding: 15px;
   border-radius: 5px;
   color: #e4f4ff;
+
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
 
   opacity: 0;
-  animation-duration: .5s;
+
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+
+  -webkit-animation-name: opacidade;
   animation-name: opacidade;
+
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  animation-delay: .2s;
+
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
-@keyframes opacidade{
-  
-  100%{
+@-webkit-keyframes opacidade {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacidade {
+  100% {
     opacity: 1;
   }
 }
@@ -42,63 +69,75 @@
 }
 
 .product-list article a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-radius: 5px;
-  background-color: #065A82;
+  background-color: #065a82;
   height: 42px;
   width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
-  border: solid 1px #1B3B6F;
+  border: solid 1px #1b3b6f;
   margin-top: 20px;
   color: #e4f4ff;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
-  
 }
 
 .product-list article a:hover {
-
-  background-color: #1B3B6F;
-
+  background-color: #1b3b6f;
 }
 
 .product-list article:hover {
+  -webkit-box-shadow: 2px 2px 10px black;
   box-shadow: 2px 2px 10px black;
 }
 
-
-
 .product-list .action {
- 
   padding-top: 20px;
   padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.product-list .action button { 
+.product-list .action button {
   padding: 10px 20px;
   border-radius: 5px;
-  border: solid 1px #1B3B6F;
-  background-color: #21295C;
+  border: solid 1px #1b3b6f;
+  background-color: #21295c;
   color: #fff;
-  font-size:16px;
+  font-size: 16px;
   border: 0;
   font-weight: 600;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
 }
 
-.product-list .action button:hover{
+.product-list .action button:hover {
+  -webkit-box-shadow: 2px 2px 10px black;
   box-shadow: 2px 2px 10px black;
 }
 
-.product-list .action button:disabled, action button:disabled:hover{
+.product-list .action button:disabled,
+action button:disabled:hover {
   opacity: 0.3;
   cursor: initial;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -107,27 +146,42 @@
 }
 
 .loading .carregando {
-  
-    display: block;  
-    margin-top: 25px;  
-    border-radius: 5px;
-    animation-duration: 2.25s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-name: placeHolderShimmer;
-    animation-timing-function: linear;
-    background: darkgray;
-    background: linear-gradient(130deg, #075a82 5%, #014f75 50%, #075a82 95%);
-    background-size: 1000px 104px;
-    height: 153px;
-    position: relative;
+  display: block;
+  margin-top: 25px;
+  border-radius: 5px;
+  -webkit-animation-duration: 2.25s;
+  animation-duration: 2.25s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+  animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background: darkgray;
+  background: -o-linear-gradient(320deg, #075a82 5%, #014f75 50%, #075a82 95%);
+  background: linear-gradient(130deg, #075a82 5%, #014f75 50%, #075a82 95%);
+
+  background-size: 1000px 104px;
+  height: 153px;
+  position: relative;
 }
 
-@keyframes placeHolderShimmer{
-  0%{
-      background-position: -500px 0
+@-webkit-keyframes placeHolderShimmer {
+  0% {
+    background-position: -500px 0;
   }
-  100%{
-      background-position: 500px 0
+  100% {
+    background-position: 500px 0;
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -500px 0;
+  }
+  100% {
+    background-position: 500px 0;
   }
 }

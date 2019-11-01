@@ -4,10 +4,16 @@ header#main-header {
   max-width: 500px;
   height: 70px;
   background-color: #1B3B6F;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: white;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 50px;
   border: solid 1px #21295C;
   border-radius: 5px;
